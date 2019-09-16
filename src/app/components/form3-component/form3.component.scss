@@ -1,0 +1,26 @@
+.form3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+}
+.form {
+  min-width: 350px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.save {
+  background: #27a745;
+  color: #ffffff;
+  width: 45%;
+}
+.cancel {
+  background: #007bff;
+  color: #ffffff;
+  width: 45%;
+}

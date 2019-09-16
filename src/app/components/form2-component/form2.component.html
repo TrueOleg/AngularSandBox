@@ -1,0 +1,64 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="form2">
+  <h1>Form - 2</h1>
+  <h3>Company Details</h3>
+
+  <form [formGroup]="dataForm" class="form">
+    <div class="inputs-container">
+      <mat-form-field appearance="outline">
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name" class="example-full-width" />
+
+        <mat-error *ngIf="dataForm.get('name').hasError('required')">
+          Name is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+
+        <mat-error *ngIf="dataForm.get('email').hasError('required')">
+          Email is required
+        </mat-error>
+        <mat-error
+          *ngIf="
+            !dataForm.get('email').hasError('required') &&
+            dataForm.get('email').hasError('email')
+          "
+        >
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Company</mat-label>
+        <input matInput formControlName="company" class="example-full-width" />
+
+        <mat-error *ngIf="dataForm.get('company').hasError('required')">
+          Company is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Job Title</mat-label>
+        <input matInput formControlName="title" class="example-full-width" />
+
+        <mat-error *ngIf="dataForm.get('title').hasError('required')">
+          Job Title is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Employee Number</mat-label>
+        <input matInput formControlName="phone" class="example-full-width" />
+
+        <mat-error *ngIf="dataForm.get('phone').hasError('required')">
+          Employee Number is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="button-container">
+      <button mat-button class="cancel" (click)="redirectToHome()">
+        Cancel
+      </button>
+      <button mat-button class="save" (click)="submit()">Save</button>
+    </div>
+  </form>
+</div>
