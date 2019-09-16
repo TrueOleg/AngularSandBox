@@ -1,5 +1,7 @@
 # AngularSandBox
 
+Angular Test Task - improvement of the application that has an entry page with 3 links to 3 different forms.
+
 ## Getting Started
 
 ```
