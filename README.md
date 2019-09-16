@@ -1,7 +1,5 @@
 # AngularSandBox
 
-Template to start mobile application development on ionic 4 with firebase integration
-
 ## Getting Started
 
 ```
